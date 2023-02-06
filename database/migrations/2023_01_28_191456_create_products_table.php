@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->unsignedBigInteger('price');
-            $table->unsignedBigInteger('stock');
-            $table->unsignedBigInteger('price_code');
-            $table->string('warrenty');
+            $table->unsignedBigInteger('stock')->dafault(0);
+            $table->text('price_code');
+            $table->string('has_warrenty');
             $table->timestamps();
         });
     }
